@@ -7,6 +7,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Program;
 use App\Entity\season;
+use App\Entity\Episode;
+
 use App\Repository\SeasonRepository;
 
 
@@ -74,4 +76,5 @@ Class ProgramController extends AbstractController
             'season' => $season
         ]);
     }
+
 }
