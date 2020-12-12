@@ -1,4 +1,4 @@
 # Wild-series
 
-Le lien de la quête 9 en vidéo : 
-https://www.loom.com/share/867cf4ad12f24cd4a8fe6aab4563877f
+Le lien des quçetes 9-10 en vidéo : 
+https://www.loom.com/share/a4793a675a2b41eebed4e418f667643d
