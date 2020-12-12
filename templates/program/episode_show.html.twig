@@ -5,15 +5,16 @@
 {% block title %}Episode #{{ episode.number }} {% endblock %}
 
 {% block body %}
-    <div class="container-fluid">
-        <div class="container">
+    <div class="media">
+    <img class="align-self-start mr-3" src="{{program.poster}}" alt="{{ program.title }} poster">
+    <div class="media-body">
+        <div class="season_description">
             <h1>{{program.title}} : Saison {{ season.number }}</h1>
             <p>{{ season.description }}</p>
             <h2>Episode {{ episode.number }} : {{episode.title}}</h2>                
             <p>Résumé : {{ episode.synopsis}}</p><br>
             <a href="{{ path('program_season_show', {programId: program.id, seasonId:season.id}) }}">  Retour à la liste des épisodes</a><br><br>
-
         </div>
     </div>
-
 {% endblock %}
+

@@ -2,21 +2,20 @@
 {% block title %}Série n°{{ program.id }} : {{program.title}}{% endblock %}
 
 {% block body %}
-
-<div class="media">
-  <img class="align-self-start mr-3" src="{{program.poster}}" alt="{{ program.title }} poster">
-  <div class="media-body">
-    <h1 class="mt-0">{{ program.title }}</h1>
-    <p>{{ program.summary }}</p>
-    <p>Catégorie : {{ program.category.name }}</p>
-    {% for season in program.season %}
-    <a href="{{ path('program_season_show', {programId: program.id, seasonId:season.id}) }}">  Saison  {{ season.number}}</a><br><br>
-    {% endfor %}
-    <a href="{{ path('program_index') }}">
-    Retour à la liste des programmes
-    </a>
+  <div class="media">
+    <img class="align-self-start mr-3" src="{{program.poster}}" alt="{{ program.title }} poster">
+    <div class="media-body">
+      <h1 class="mt-0">{{ program.title }}</h1>
+      <p>{{ program.summary }}</p>
+      <p>Catégorie : {{ program.category.name }}</p>
+      {% for season in program.season %}
+        <ul>
+          <a href="{{ path('program_season_show', {programId: program.id, seasonId:season.id}) }}">Saison {{ season.number}}</a>
+        </ul>
+      {% endfor %}
+      <a href="{{ path('program_index') }}">
+      Retour à la liste des programmes
+      </a>
+    </div>
   </div>
-</div>
-
-
 {% endblock %}
