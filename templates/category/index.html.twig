@@ -10,7 +10,9 @@
     {% else %}
         Aucune série trouvée.
     {% endfor %}
-
+    <a href="{{ path('category_new') }}"> 
+        Ajouter une catégorie
+    </a><br>
     <a href="{{ path('app_index') }}">
         Retour à l'accueil
     </a>
