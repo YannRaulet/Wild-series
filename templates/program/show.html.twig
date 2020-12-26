@@ -13,6 +13,9 @@
           <a href="{{ path('program_season_show', {programId: program.id, seasonId:season.id}) }}">Saison {{ season.number}}</a>
         </ul>
       {% endfor %}
+      <a href="{{ path('season_new') }}"> 
+        Ajouter une saison
+      </a><br>
       <a href="{{ path('program_index') }}">
       Retour à la liste des programmes
       </a>
