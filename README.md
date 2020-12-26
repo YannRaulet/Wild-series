@@ -11,3 +11,6 @@ Quête 12 : Générer un CRUD:
 Seasons : https://www.loom.com/share/bc217850ec3949ffaf51f719a90e5859
 
 Episodes : https://www.loom.com/share/90ff0fdbeadf4a62897dbef744bbf3b0
+
+Quête 13: Validation :
+https://www.loom.com/share/8209bf81a29b417087b1e21a5898de5e
