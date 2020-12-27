@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Program;
 use App\Entity\season;
 use App\Entity\Episode;
+use App\Entity\Actor;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Component\HttpFoundation\Request;
 use App\Form\ProgramType;
@@ -41,7 +42,7 @@ Class ProgramController extends AbstractController
      * The controller for the program add form
      * Display the form or deal with it
      *
-     * @Route("/new", name="new")
+     * @Route("/new", name="new")App\Entity\Program
      */
     public function new(Request $request) : Response
     {
@@ -78,6 +79,7 @@ Class ProgramController extends AbstractController
                 'program' => $program
         ]);
     }
+
     /**
      * Show season of a program
      * @Route("/program/{programId}/season/{seasonId}", name="season_show")
@@ -95,7 +97,7 @@ Class ProgramController extends AbstractController
     }
 
     /**
-     * Show season of a program
+     * Show episodes of a program
      * @Route("/program/{programId}/episode/{episodeId}", name="episode_show")
      * @ParamConverter("program", class="App\Entity\Program", options={"mapping": {"programId": "id"}})
      * @ParamConverter("episode", class="App\Entity\Episode", options={"mapping": {"episodeId": "id"}})
@@ -107,6 +109,21 @@ Class ProgramController extends AbstractController
             'program' => $program,
             'season' => $season,
             'episode' => $episode,
+        ]);
+    }
+
+    /**
+     * Show actors of a program
+     * @Route("/program/{programId}/actor/{actorId}", name="actor_show")
+     * @ParamConverter("program", class="App\Entity\Program", options={"mapping": {"programId": "id"}})
+     * @ParamConverter("actor", class="App\Entity\Actor", options={"mapping": {"actorId": "id"}})
+     * @return Response
+     */
+    public function showActor(Program $program, Actor $actor): Response
+    {
+        return $this->render('program/actor_show.html.twig', [
+            'program' => $program,
+            'actor' => $actor,
         ]);
     }
 
