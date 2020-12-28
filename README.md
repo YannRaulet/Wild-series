@@ -15,5 +15,8 @@ Episodes : https://www.loom.com/share/90ff0fdbeadf4a62897dbef744bbf3b0
 Quête 13: Validation :
 https://www.loom.com/share/8209bf81a29b417087b1e21a5898de5e
 
-Quête 14: Doctrien relations "Many-to-many" : 
+Quête 14: Doctrine relations "Many-to-many" : 
 https://www.loom.com/share/da294dd26d42420a87a3b33a4018087b
+
+Quête 15: EntityType : 
+https://www.loom.com/share/909ac764cc164e74bae647690259ad20
