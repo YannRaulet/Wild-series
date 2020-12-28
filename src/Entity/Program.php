@@ -57,6 +57,7 @@ class Program
 
     /**
      * @ORM\ManyToMany(targetEntity=Actor::class, mappedBy="programs")
+     * @ORM\OrderBy({"name" = "ASC"})
      */
     private $actors;
 
