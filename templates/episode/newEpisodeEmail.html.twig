@@ -1,0 +1,11 @@
+
+{% extends 'layoutEmail.html.twig' %}
+
+    {% block title %}New episode{% endblock %}
+
+    {% block body %}
+        <h1>New episode {{ episode.title }} from  {{ episode.season.program.title}} created</h1>
+        <p>Hello, the new episode {{ episode.number}} : {{ episode.title }} from {{ episode.season.program.title}} has been created on Wild Series</p>
+        <a href='http://localhost:8000/programs/{{ episode.season.program.slug }}/season/{{ episode.season.id }}'>Voir la fiche</a>
+
+    {% endblock %}
