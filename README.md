@@ -29,3 +29,6 @@ https://www.loom.com/share/04b2a123591a40788e22fa01d776c02c
 
 Quête 18: Envoi d'email :
 https://www.loom.com/share/22f85376bb3b4853894d35cb51603b5a
+
+Quête 19: gestion des utilisateurs :
+https://www.loom.com/share/7d77203cb3bc4290843d65b455a59467
