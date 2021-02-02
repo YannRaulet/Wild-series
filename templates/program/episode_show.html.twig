@@ -11,8 +11,24 @@
             <p>{{ season.description }}</p>
             <h2>Episode {{ episode.number }} : {{episode.title}}</h2>                
             <p>Résumé : {{ episode.synopsis}}</p><br>
-            <a href="{{ path('program_season_show', {programSlug: program.slug, seasonId:season.id}) }}">  Retour à la liste des épisodes</a><br><br>
         </div>
+        <div>
+        {% if is_granted('ROLE_ADMIN') %}
+            {{form_start(form) }}
+            {{ form_widget(form)}}
+            <input type="submit" value="Ajouter un commentaire">
+            {{ form_end(form) }}
+        {% endif %}  
+        </div>
+        <div>
+        <hr>
+        <h3>Commentaires</h3>
+        {% for comment in comments %}
+            {{ comment.author.username }} : {{ comment.comment}} - Note {{ comment.rate }}/10.
+            <br>
+        {% endfor %}
+        </div>>
+        <a href="{{ path('program_season_show', {programSlug: program.slug, seasonId:season.id}) }}">  Retour à la liste des épisodes</a><br><br>
     </div>
 {% endblock %}
 
